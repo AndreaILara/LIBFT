@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ainigo-l <ainigo-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andreailara <andreailara@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 12:52:00 by ainigo-l          #+#    #+#             */
-/*   Updated: 2024/10/01 14:32:34 by ainigo-l         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:55:29 by andreailara      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	space_left;
 	size_t	i;
 
+	if (!dest || !src)
+		return (0);
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
 	if (size == 0 || dest_len >= size)

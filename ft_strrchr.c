@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ainigo-l <ainigo-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andreailara <andreailara@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 15:07:23 by ainigo-l          #+#    #+#             */
-/*   Updated: 2024/10/01 14:38:00 by ainigo-l         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:06:43 by andreailara      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,15 @@
 
 char	*ft_strrchr(const char *str, int c)
 {
-	const char	*latest;
+	const char	*latest = NULL;
 
-	latest = NULL;
 	while (*str)
 	{
 		if (*str == (char)c)
-		{
 			latest = str;
-		}
 		str++;
 	}
-	if (c == '\0')
-	{
+	if ((char)c == '\0')
 		return ((char *)str);
-	}
 	return ((char *)latest);
 }

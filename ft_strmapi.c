@@ -3,24 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ainigo-l <ainigo-l@student.42.fr>          +#+  +:+       +#+        */
+/*   By: andreailara <andreailara@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/24 11:01:43 by ainigo-l          #+#    #+#             */
-/*   Updated: 2024/10/01 14:45:09 by ainigo-l         ###   ########.fr       */
+/*   Updated: 2024/10/02 11:15:56 by andreailara      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-size_t	ft_strlen(const char *str)
-{
-	size_t	len;
-
-	len = 0;
-	while (str[len] != '\0')
-		len++;
-	return (len);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
